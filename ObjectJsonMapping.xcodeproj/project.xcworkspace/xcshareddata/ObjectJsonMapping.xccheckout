@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DDE50295-6D85-43AF-B302-A4C098875F76</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ObjectJsonMapping</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9CAD5A99C3975CBBBE7A432FFAB2B3AC273BF552</key>
+		<string>github.com:mokemokechicken/ObjectJsonMappingSwiftTest.git</string>
+		<key>E4136A02148B21DC8BFE3D5C182100DBC6DAEDA8</key>
+		<string>github.com:mokemokechicken/ObjectJsonMapperGenerator.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ObjectJsonMapping.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9CAD5A99C3975CBBBE7A432FFAB2B3AC273BF552</key>
+		<string>../..</string>
+		<key>E4136A02148B21DC8BFE3D5C182100DBC6DAEDA8</key>
+		<string>../..ObjectJsonMapperGenerator/</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:mokemokechicken/ObjectJsonMappingSwiftTest.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9CAD5A99C3975CBBBE7A432FFAB2B3AC273BF552</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E4136A02148B21DC8BFE3D5C182100DBC6DAEDA8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ObjectJsonMapperGenerator</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9CAD5A99C3975CBBBE7A432FFAB2B3AC273BF552</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ObjectJsonMapping</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -11,6 +11,7 @@
 		BEBCC1E31A3326D9005C7EE3 /* ojm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBCC1E21A3326D9005C7EE3 /* ojm.swift */; };
 		BEBCC1E41A333044005C7EE3 /* book.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = BEBCC1DB1A32F9CB005C7EE3 /* book.json */; };
 		BEBCC1E51A33321A005C7EE3 /* order.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = BEBCC1DD1A32F9CB005C7EE3 /* order.json */; };
+		BEBCC1E81A3337EC005C7EE3 /* TypeCheck.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = BEBCC1E71A3337E0005C7EE3 /* TypeCheck.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,6 +21,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				BEBCC1E81A3337EC005C7EE3 /* TypeCheck.json in CopyFiles */,
 				BEBCC1E51A33321A005C7EE3 /* order.json in CopyFiles */,
 				BEBCC1E41A333044005C7EE3 /* book.json in CopyFiles */,
 			);
@@ -36,6 +38,8 @@
 		BEBCC1DD1A32F9CB005C7EE3 /* order.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = order.json; sourceTree = "<group>"; };
 		BEBCC1DE1A32F9CB005C7EE3 /* order.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = order.yml; sourceTree = "<group>"; };
 		BEBCC1E21A3326D9005C7EE3 /* ojm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ojm.swift; sourceTree = "<group>"; };
+		BEBCC1E61A333556005C7EE3 /* test.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.yml; sourceTree = "<group>"; };
+		BEBCC1E71A3337E0005C7EE3 /* TypeCheck.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TypeCheck.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 		BEBCC1DA1A32F9CB005C7EE3 /* example */ = {
 			isa = PBXGroup;
 			children = (
+				BEBCC1E61A333556005C7EE3 /* test.yml */,
+				BEBCC1E71A3337E0005C7EE3 /* TypeCheck.json */,
 				BEBCC1DB1A32F9CB005C7EE3 /* book.json */,
 				BEBCC1DC1A32F9CB005C7EE3 /* book.yml */,
 				BEBCC1DD1A32F9CB005C7EE3 /* order.json */,

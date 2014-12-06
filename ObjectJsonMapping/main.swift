@@ -34,6 +34,7 @@ var ret = [String:Bool]()
 
 ret["Book"] = checkJsonEntity(Book.self, bundle.pathForResource("book", ofType: "json")!)
 ret["Order"] = checkJsonEntity(Order.self, bundle.pathForResource("order", ofType: "json")!)
+ret["TypeCheck"] = checkJsonEntity(TypeCheck.self, bundle.pathForResource("TypeCheck", ofType: "json")!)
 
 for (name, success) in ret {
     let result = success ? "OK" : "NG"
