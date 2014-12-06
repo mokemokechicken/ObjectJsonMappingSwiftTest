@@ -1,0 +1,3 @@
+[submodule "ObjectJsonMapperGenerator"]
+	path = ObjectJsonMapperGenerator
+	url = https://github.com/mokemokechicken/ObjectJsonMapperGenerator.git
