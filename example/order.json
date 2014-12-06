@@ -8,9 +8,5 @@
   "comments": [
     {"user": {"name": "who1"}, "message": "this shop is good!"},
     {"user": {"name": "who2"}, "message": "this shop is bad!", "deleted": true}
-  ],
-  "csv": [
-    [ {"id": 1, "name": "name1"} ],
-    [ {"id": 2, "name": "name2"}, {"id": 22, "name": "name22"} ]
   ]
 }

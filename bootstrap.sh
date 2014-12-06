@@ -1,9 +1,13 @@
 #!/bin/sh
 
 cd $(dirname $0)
+
+git submodule update --init --recursive
+
 cd ObjectJsonMapperGenerator
 
-ruby bin/make_ojm.rb -c example/book.yml -l swift -o ../OJM/book.swift
+cat example/book.yml example/order.yml > .tmp.yml
 
-rm -rf ../example
-cp -r example ../example
+ruby bin/make_ojm.rb -c .tmp.yml -l swift -o ../OJM/ojm.swift
+
+rm -f .tmp.yml

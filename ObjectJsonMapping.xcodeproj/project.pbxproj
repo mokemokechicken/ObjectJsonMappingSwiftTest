@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		BEBCC1B01A32F713005C7EE3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBCC1AF1A32F713005C7EE3 /* main.swift */; };
-		BEBCC1DF1A32F9F9005C7EE3 /* book.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBCC1D41A32F919005C7EE3 /* book.swift */; };
+		BEBCC1E31A3326D9005C7EE3 /* ojm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBCC1E21A3326D9005C7EE3 /* ojm.swift */; };
+		BEBCC1E41A333044005C7EE3 /* book.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = BEBCC1DB1A32F9CB005C7EE3 /* book.json */; };
+		BEBCC1E51A33321A005C7EE3 /* order.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = BEBCC1DD1A32F9CB005C7EE3 /* order.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		BEBCC1AA1A32F713005C7EE3 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
 			files = (
+				BEBCC1E51A33321A005C7EE3 /* order.json in CopyFiles */,
+				BEBCC1E41A333044005C7EE3 /* book.json in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -27,11 +31,11 @@
 		BEBCC1AC1A32F713005C7EE3 /* ObjectJsonMapping */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjectJsonMapping; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEBCC1AF1A32F713005C7EE3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BEBCC1D21A32F86D005C7EE3 /* bootstrap.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = bootstrap.sh; sourceTree = "<group>"; };
-		BEBCC1D41A32F919005C7EE3 /* book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = book.swift; sourceTree = "<group>"; };
 		BEBCC1DB1A32F9CB005C7EE3 /* book.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = book.json; sourceTree = "<group>"; };
 		BEBCC1DC1A32F9CB005C7EE3 /* book.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = book.yml; sourceTree = "<group>"; };
 		BEBCC1DD1A32F9CB005C7EE3 /* order.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = order.json; sourceTree = "<group>"; };
 		BEBCC1DE1A32F9CB005C7EE3 /* order.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = order.yml; sourceTree = "<group>"; };
+		BEBCC1E21A3326D9005C7EE3 /* ojm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ojm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +79,7 @@
 		BEBCC1D31A32F919005C7EE3 /* OJM */ = {
 			isa = PBXGroup;
 			children = (
-				BEBCC1D41A32F919005C7EE3 /* book.swift */,
+				BEBCC1E21A3326D9005C7EE3 /* ojm.swift */,
 			);
 			path = OJM;
 			sourceTree = "<group>";
@@ -147,7 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEBCC1DF1A32F9F9005C7EE3 /* book.swift in Sources */,
+				BEBCC1E31A3326D9005C7EE3 /* ojm.swift in Sources */,
 				BEBCC1B01A32F713005C7EE3 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

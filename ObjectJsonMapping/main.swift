@@ -9,23 +9,33 @@
 import Foundation
 
 
-func checkJsonEntity<ET : JsonGenEntityBase>(EntityType: ET.Type, filename: String) {
+func checkJsonEntity<ET : JsonGenEntityBase>(EntityType: ET.Type, filename: String) -> Bool {
     var data = NSData(contentsOfFile: filename)!
     
     if let b1 = ET.fromData(data) {
-        println(b1.toJsonString())
+      println(b1.toJsonString())
         let d1 = b1.toJsonData()
         let b2 = ET.fromData(d1)!
         let d2 = b2.toJsonString()
         if b1.toJsonString() == b2.toJsonString() {
-            println("OK!")
+            return true
         } else {
-            println("NG!")
+            return false
         }
     } else {
-        println("JSON parse error")
+        return false
     }
     
 }
 
-checkJsonEntity(Book.self, "/Users/ken/Documents/xcode/ObjectJsonMapping/example/book.json")
+let bundle = NSBundle.mainBundle()
+
+var ret = [String:Bool]()
+
+ret["Book"] = checkJsonEntity(Book.self, bundle.pathForResource("book", ofType: "json")!)
+ret["Order"] = checkJsonEntity(Order.self, bundle.pathForResource("order", ofType: "json")!)
+
+for (name, success) in ret {
+    let result = success ? "OK" : "NG"
+    println("\(name) \(result)")
+}
