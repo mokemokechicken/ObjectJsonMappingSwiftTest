@@ -295,7 +295,7 @@ public class Author : JsonGenEntityBase {
 public class Item : JsonGenEntityBase {
     var name: String = ""
     var price: Int = 0
-    var on_sale: Bool?
+    var onSale: Bool?
 
     public override func toJsonDictionary() -> NSDictionary {
         var hash = NSMutableDictionary()
@@ -303,8 +303,8 @@ public class Item : JsonGenEntityBase {
         hash["name"] = encode(self.name)
         // Encode price
         hash["price"] = encode(self.price)
-        // Encode on_sale
-        if let x = self.on_sale {
+        // Encode onSale
+        if let x = self.onSale {
             hash["on_sale"] = encode(x)
         }
 
@@ -328,8 +328,8 @@ public class Item : JsonGenEntityBase {
                 return nil
             }
 
-            // Decode on_sale
-            this.on_sale = h["on_sale"] as? Bool
+            // Decode onSale
+            this.onSale = h["on_sale"] as? Bool
             return this
         } else {
             return nil
@@ -514,103 +514,103 @@ public class TypeCheck_type_hash : JsonGenEntityBase {
 }
 
 public class TypeCheck : JsonGenEntityBase {
-    var type_string: String = ""
-    var type_int: Int = 0
-    var type_double: Double = 0
-    var type_bool: Bool = false
-    var type_array: [String] = [String]()
-    var type_hash: TypeCheck_type_hash = TypeCheck_type_hash()
-    var type_custom_normal: OptionalCheck = OptionalCheck()
-    var type_custom_option: OptionalCheck = OptionalCheck()
-    var type_custom_array: [OptionalCheck] = [OptionalCheck]()
+    var typeString: String = ""
+    var typeInt: Int = 0
+    var typeDouble: Double = 0
+    var typeBool: Bool = false
+    var typeArray: [String] = [String]()
+    var typeHash: TypeCheck_type_hash = TypeCheck_type_hash()
+    var typeCustomNormal: OptionalCheck = OptionalCheck()
+    var typeCustomOption: OptionalCheck = OptionalCheck()
+    var typeCustomArray: [OptionalCheck] = [OptionalCheck]()
 
     public override func toJsonDictionary() -> NSDictionary {
         var hash = NSMutableDictionary()
-        // Encode type_string
-        hash["type_string"] = encode(self.type_string)
-        // Encode type_int
-        hash["type_int"] = encode(self.type_int)
-        // Encode type_double
-        hash["type_double"] = encode(self.type_double)
-        // Encode type_bool
-        hash["type_bool"] = encode(self.type_bool)
-        // Encode type_array
-        hash["type_array"] = self.type_array.map {x in encode(x)}
-        // Encode type_hash
-        hash["type_hash"] = self.type_hash.toJsonDictionary()
-        // Encode type_custom_normal
-        hash["type_custom_normal"] = self.type_custom_normal.toJsonDictionary()
-        // Encode type_custom_option
-        hash["type_custom_option"] = self.type_custom_option.toJsonDictionary()
-        // Encode type_custom_array
-        hash["type_custom_array"] = self.type_custom_array.map {x in encode(x)}
+        // Encode typeString
+        hash["type_string"] = encode(self.typeString)
+        // Encode typeInt
+        hash["type_int"] = encode(self.typeInt)
+        // Encode typeDouble
+        hash["type_double"] = encode(self.typeDouble)
+        // Encode typeBool
+        hash["type_bool"] = encode(self.typeBool)
+        // Encode typeArray
+        hash["type_array"] = self.typeArray.map {x in encode(x)}
+        // Encode typeHash
+        hash["type_hash"] = self.typeHash.toJsonDictionary()
+        // Encode typeCustomNormal
+        hash["type_custom_normal"] = self.typeCustomNormal.toJsonDictionary()
+        // Encode typeCustomOption
+        hash["type_custom_option"] = self.typeCustomOption.toJsonDictionary()
+        // Encode typeCustomArray
+        hash["type_custom_array"] = self.typeCustomArray.map {x in encode(x)}
         return hash
     }
 
     public override class func fromJsonDictionary(hash: NSDictionary?) -> TypeCheck? {
         if let h = hash {
             var this = TypeCheck()
-            // Decode type_string
+            // Decode typeString
             if let x = h["type_string"] as? String {
-                this.type_string = x
+                this.typeString = x
             } else {
                 return nil
             }
 
-            // Decode type_int
+            // Decode typeInt
             if let x = h["type_int"] as? Int {
-                this.type_int = x
+                this.typeInt = x
             } else {
                 return nil
             }
 
-            // Decode type_double
+            // Decode typeDouble
             if let x = h["type_double"] as? Double {
-                this.type_double = x
+                this.typeDouble = x
             } else {
                 return nil
             }
 
-            // Decode type_bool
+            // Decode typeBool
             if let x = h["type_bool"] as? Bool {
-                this.type_bool = x
+                this.typeBool = x
             } else {
                 return nil
             }
 
-            // Decode type_array
+            // Decode typeArray
             if let xx = h["type_array"] as? [String] {
-                this.type_array = xx
+                this.typeArray = xx
             } else {
                 return nil
             }
 
-            // Decode type_hash
+            // Decode typeHash
             if let x = TypeCheck_type_hash.fromJsonDictionary((h["type_hash"] as? NSDictionary)) {
-                this.type_hash = x
+                this.typeHash = x
             } else {
                 return nil
             }
 
-            // Decode type_custom_normal
+            // Decode typeCustomNormal
             if let x = OptionalCheck.fromJsonDictionary((h["type_custom_normal"] as? NSDictionary)) {
-                this.type_custom_normal = x
+                this.typeCustomNormal = x
             } else {
                 return nil
             }
 
-            // Decode type_custom_option
+            // Decode typeCustomOption
             if let x = OptionalCheck.fromJsonDictionary((h["type_custom_option"] as? NSDictionary)) {
-                this.type_custom_option = x
+                this.typeCustomOption = x
             } else {
                 return nil
             }
 
-            // Decode type_custom_array
+            // Decode typeCustomArray
             if let xx = h["type_custom_array"] as? [NSDictionary] {
                 for x in xx {
                     if let obj = OptionalCheck.fromJsonDictionary(x) {
-                        this.type_custom_array.append(obj)
+                        this.typeCustomArray.append(obj)
                     } else {
                         return nil
                     }
@@ -689,51 +689,51 @@ public class OptionalCheck_type_nested_optional : JsonGenEntityBase {
 }
 
 public class OptionalCheck : JsonGenEntityBase {
-    var type_string: String?
-    var type_int: Int?
-    var type_double: Double?
-    var type_bool: Bool?
-    var type_array: [String]?
-    var type_hash: OptionalCheck_type_hash?
-    var type_nested_optional: OptionalCheck_type_nested_optional = OptionalCheck_type_nested_optional()
-    var type_custom: MyNumber?
+    var typeString: String?
+    var typeInt: Int?
+    var typeDouble: Double?
+    var typeBool: Bool?
+    var typeArray: [String]?
+    var typeHash: OptionalCheck_type_hash?
+    var typeNestedOptional: OptionalCheck_type_nested_optional = OptionalCheck_type_nested_optional()
+    var typeCustom: MyNumber?
 
     public override func toJsonDictionary() -> NSDictionary {
         var hash = NSMutableDictionary()
-        // Encode type_string
-        if let x = self.type_string {
+        // Encode typeString
+        if let x = self.typeString {
             hash["type_string"] = encode(x)
         }
 
-        // Encode type_int
-        if let x = self.type_int {
+        // Encode typeInt
+        if let x = self.typeInt {
             hash["type_int"] = encode(x)
         }
 
-        // Encode type_double
-        if let x = self.type_double {
+        // Encode typeDouble
+        if let x = self.typeDouble {
             hash["type_double"] = encode(x)
         }
 
-        // Encode type_bool
-        if let x = self.type_bool {
+        // Encode typeBool
+        if let x = self.typeBool {
             hash["type_bool"] = encode(x)
         }
 
-        // Encode type_array
-        if let x = self.type_array {
+        // Encode typeArray
+        if let x = self.typeArray {
             hash["type_array"] = x.map {x in encode(x)}
         }
 
-        // Encode type_hash
-        if let x = self.type_hash {
+        // Encode typeHash
+        if let x = self.typeHash {
             hash["type_hash"] = x.toJsonDictionary()
         }
 
-        // Encode type_nested_optional
-        hash["type_nested_optional"] = self.type_nested_optional.toJsonDictionary()
-        // Encode type_custom
-        if let x = self.type_custom {
+        // Encode typeNestedOptional
+        hash["type_nested_optional"] = self.typeNestedOptional.toJsonDictionary()
+        // Encode typeCustom
+        if let x = self.typeCustom {
             hash["type_custom"] = x.toJsonDictionary()
         }
 
@@ -743,30 +743,30 @@ public class OptionalCheck : JsonGenEntityBase {
     public override class func fromJsonDictionary(hash: NSDictionary?) -> OptionalCheck? {
         if let h = hash {
             var this = OptionalCheck()
-            // Decode type_string
-            this.type_string = h["type_string"] as? String
-            // Decode type_int
-            this.type_int = h["type_int"] as? Int
-            // Decode type_double
-            this.type_double = h["type_double"] as? Double
-            // Decode type_bool
-            this.type_bool = h["type_bool"] as? Bool
-            // Decode type_array
+            // Decode typeString
+            this.typeString = h["type_string"] as? String
+            // Decode typeInt
+            this.typeInt = h["type_int"] as? Int
+            // Decode typeDouble
+            this.typeDouble = h["type_double"] as? Double
+            // Decode typeBool
+            this.typeBool = h["type_bool"] as? Bool
+            // Decode typeArray
             if let xx = h["type_array"] as? [String] {
-                this.type_array = xx
+                this.typeArray = xx
             }
 
-            // Decode type_hash
-            this.type_hash = OptionalCheck_type_hash.fromJsonDictionary((h["type_hash"] as? NSDictionary))
-            // Decode type_nested_optional
+            // Decode typeHash
+            this.typeHash = OptionalCheck_type_hash.fromJsonDictionary((h["type_hash"] as? NSDictionary))
+            // Decode typeNestedOptional
             if let x = OptionalCheck_type_nested_optional.fromJsonDictionary((h["type_nested_optional"] as? NSDictionary)) {
-                this.type_nested_optional = x
+                this.typeNestedOptional = x
             } else {
                 return nil
             }
 
-            // Decode type_custom
-            this.type_custom = MyNumber.fromJsonDictionary((h["type_custom"] as? NSDictionary))
+            // Decode typeCustom
+            this.typeCustom = MyNumber.fromJsonDictionary((h["type_custom"] as? NSDictionary))
             return this
         } else {
             return nil

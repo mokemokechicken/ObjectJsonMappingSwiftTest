@@ -8,8 +8,13 @@
 
 import Foundation
 
+enum ResultType : String {
+    case OK = "OK"
+    case ParseNG = "ParseNG"
+    case RepeatNG = "RepeatNG"
+}
 
-func checkJsonEntity<ET : JsonGenEntityBase>(EntityType: ET.Type, filename: String) -> Bool {
+func checkJsonEntity<ET : JsonGenEntityBase>(EntityType: ET.Type, filename: String) -> ResultType {
     var data = NSData(contentsOfFile: filename)!
     
     if let b1 = ET.fromData(data) {
@@ -18,25 +23,26 @@ func checkJsonEntity<ET : JsonGenEntityBase>(EntityType: ET.Type, filename: Stri
         let b2 = ET.fromData(d1)!
         let d2 = b2.toJsonString()
         if b1.toJsonString() == b2.toJsonString() {
-            return true
+            return .OK
         } else {
-            return false
+            return .RepeatNG
         }
     } else {
-        return false
+        return .ParseNG
     }
     
 }
 
 let bundle = NSBundle.mainBundle()
 
-var ret = [String:Bool]()
+var ret = [String:ResultType]()
 
-ret["Book"] = checkJsonEntity(Book.self, bundle.pathForResource("book", ofType: "json")!)
-ret["Order"] = checkJsonEntity(Order.self, bundle.pathForResource("order", ofType: "json")!)
-ret["TypeCheck"] = checkJsonEntity(TypeCheck.self, bundle.pathForResource("TypeCheck", ofType: "json")!)
+ret["Book should be OK: "] = checkJsonEntity(Book.self, bundle.pathForResource("book", ofType: "json")!)
+ret["Order should be OK: "] = checkJsonEntity(Order.self, bundle.pathForResource("order", ofType: "json")!)
+ret["TypeCheck should be OK: "] = checkJsonEntity(TypeCheck.self, bundle.pathForResource("TypeCheck", ofType: "json")!)
+ret["bookError should be ParseNG: "] = checkJsonEntity(TypeCheck.self, bundle.pathForResource("bookError", ofType: "json")!)
+ret["bookErrorLackKey should be ParseNG: "] = checkJsonEntity(TypeCheck.self, bundle.pathForResource("bookErrorLackKey", ofType: "json")!)
 
-for (name, success) in ret {
-    let result = success ? "OK" : "NG"
-    println("\(name) \(result)")
+for (name, result) in ret {
+    println("\(name) \(result.rawValue)")
 }
