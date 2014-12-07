@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE5FCCD71A348E6D009C8FD9 /* authors.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = BE5FCCD61A348E64009C8FD9 /* authors.json */; };
 		BEBCC1B01A32F713005C7EE3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBCC1AF1A32F713005C7EE3 /* main.swift */; };
 		BEBCC1E31A3326D9005C7EE3 /* ojm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBCC1E21A3326D9005C7EE3 /* ojm.swift */; };
 		BEBCC1E41A333044005C7EE3 /* book.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = BEBCC1DB1A32F9CB005C7EE3 /* book.json */; };
@@ -23,6 +24,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				BE5FCCD71A348E6D009C8FD9 /* authors.json in CopyFiles */,
 				BEBCC1EC1A334A1E005C7EE3 /* bookErrorLackKey.json in CopyFiles */,
 				BEBCC1EA1A3348F1005C7EE3 /* bookError.json in CopyFiles */,
 				BEBCC1E81A3337EC005C7EE3 /* TypeCheck.json in CopyFiles */,
@@ -34,6 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE5FCCD61A348E64009C8FD9 /* authors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = authors.json; sourceTree = "<group>"; };
 		BEBCC1AC1A32F713005C7EE3 /* ObjectJsonMapping */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjectJsonMapping; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEBCC1AF1A32F713005C7EE3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BEBCC1D21A32F86D005C7EE3 /* bootstrap.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = bootstrap.sh; sourceTree = "<group>"; };
@@ -97,6 +100,7 @@
 		BEBCC1DA1A32F9CB005C7EE3 /* example */ = {
 			isa = PBXGroup;
 			children = (
+				BE5FCCD61A348E64009C8FD9 /* authors.json */,
 				BEBCC1E91A33476D005C7EE3 /* bookError.json */,
 				BEBCC1EB1A334A02005C7EE3 /* bookErrorLackKey.json */,
 				BEBCC1E61A333556005C7EE3 /* test.yml */,
@@ -281,6 +285,7 @@
 				BEBCC1B51A32F713005C7EE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
